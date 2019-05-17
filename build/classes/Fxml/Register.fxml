@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1260.0" styleClass="loginBackground" stylesheets="@../StaticFiles/style.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="libraryexpert.AccountController">
+   <children>
+      <HBox prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #2f2f2fc7;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <HBox fx:id="header" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="34.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/library.png" />
+               </image>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </ImageView>
+            <Text fx:id="apName" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Library Expert" wrappingWidth="197.140625">
+               <font>
+                  <Font name="Roboto Bold" size="24.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <HBox.margin>
+                  <Insets top="6.0" />
+               </HBox.margin>
+            </Text>
+            <HBox alignment="TOP_RIGHT" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#RedirectToSignIn" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: white;" text="Sign In">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Roboto" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button disable="true" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: #aeaeae; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: white;" text="Sign Up">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Roboto" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </HBox>
+      <VBox fx:id="loginForm" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="62.0">
+         <children>
+            <Label fx:id="lblStatus" alignment="CENTER" prefHeight="18.0" prefWidth="205.0" textFill="#e13a3a">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Roboto" size="14.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/baseline_account_circle_black_18dp.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="5.0" top="25.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <TextField fx:id="txtUsername" prefWidth="200.0" promptText="Username" style="-fx-prompt-text-fill: white; -fx-background-color: transparent; -fx-border-width: 0px 0px 1px 0px; -fx-border-color: white; -fx-text-fill: white; -fx-font-size: 15;">
+                     <HBox.margin>
+                        <Insets top="20.0" />
+                     </HBox.margin></TextField>
+               </children>
+               <padding>
+                  <Insets left="-15.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/baseline_lock_black_18dp.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="5.0" top="25.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <PasswordField fx:id="txtPassword" prefWidth="200.0" promptText="Password" style="-fx-prompt-text-fill: white; -fx-background-color: transparent; -fx-border-width: 0px 0px 1px 0px; -fx-border-color: white; -fx-text-fill: white; -fx-font-size: 15;">
+                     <HBox.margin>
+                        <Insets top="20.0" />
+                     </HBox.margin></PasswordField>
+               </children>
+               <padding>
+                  <Insets left="-15.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/baseline_lock_black_18dp.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="5.0" top="25.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <PasswordField fx:id="confirmPassword" prefWidth="200.0" promptText="Confirm Password" style="-fx-prompt-text-fill: white; -fx-background-color: transparent; -fx-border-width: 0px 0px 1px 0px; -fx-border-color: white; -fx-text-fill: white; -fx-font-size: 15;">
+                     <HBox.margin>
+                        <Insets top="20.0" />
+                     </HBox.margin>
+                  </PasswordField>
+               </children>
+               <padding>
+                  <Insets left="-15.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/baseline_vpn_key_black_18dp.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="5.0" top="25.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <PasswordField fx:id="txtAdminPassword" prefWidth="200.0" promptText="Admin Password" style="-fx-prompt-text-fill: white; -fx-background-color: transparent; -fx-border-width: 0px 0px 1px 0px; -fx-border-color: white; -fx-text-fill: white; -fx-font-size: 15;">
+                     <HBox.margin>
+                        <Insets top="20.0" />
+                     </HBox.margin>
+                  </PasswordField>
+               </children>
+               <padding>
+                  <Insets left="-15.0" />
+               </padding>
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#Register" prefHeight="32.0" prefWidth="250.0" style="-fx-background-color: #2f2f2fa3; -fx-background-radius: 50; -fx-text-fill: white; -fx-border-width: 1px; -fx-border-color: white; -fx-border-radius: 20;" text="Sign Up">
+               <font>
+                  <Font name="Roboto" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <VBox.margin>
+                  <Insets bottom="100.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" style="-fx-background-color: #2f2f2fa3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright © Ghita David Leoanrd. All rights reserved.">
+               <font>
+                  <Font name="Roboto" size="16.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

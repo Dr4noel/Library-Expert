@@ -1,0 +1,14 @@
+.loginBackground {
+    -fx-background-image: url('/Images/background.jpg');
+    -fx-background-size: cover; 
+}
+
+.homeGround {
+    -fx-background-image: url('/Images/HomeBackground.jpg');
+    -fx-background-size: cover;
+}
+
+.addBookView {
+    -fx-background-image: url('/Images/bookShelf.jpg');
+    -fx-background-size: cover;
+}
